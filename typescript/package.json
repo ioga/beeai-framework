@@ -171,7 +171,8 @@
     "release": "release-it",
     "_ensure_env": "cp -n .env.template .env || true",
     "git:commit-msg": "yarn commitlint --edit --",
-    "git:pre-commit": "yarn copyright:check && yarn docs:check && yarn lint && yarn format && yarn ts:check && yarn run test:unit"
+    "git:pre-commit": "yarn copyright:check && yarn docs:check && yarn lint && yarn format && yarn ts:check && yarn run test:unit",
+    "postinstall": "yarn build"
   },
   "dependencies": {
     "@ai-zen/node-fetch-event-source": "^2.1.4",
